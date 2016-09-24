@@ -4,14 +4,13 @@ t = int(input())
 
 for p in range(t):
     s = input()
-    stack = []
+    char = None
     count = 0
     for i in range(len(s)):
-        if not stack:
-            stack = s[i]
-        elif s[i] in stack:
+        if char is None:
+            char = s[i]
+        elif char == s[i]:
             count += 1
         else:
-            stack = []
-            stack = s[i]
+            char = s[i]
     print(count)
