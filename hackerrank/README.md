@@ -1,4 +1,4 @@
-# ${1:Project Name}
+## Project Name
 Hackerrank: Here I'm representing solution of different types hackerrank problems using python3
 
 ## Contributing
