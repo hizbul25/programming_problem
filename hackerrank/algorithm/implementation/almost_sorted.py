@@ -1,7 +1,7 @@
 #URL: https://www.hackerrank.com/challenges/almost-sorted
 
 
-def isSorted(a):
+def is_sorted(a):
     for i in range(n-1):
         if a[i] > a[i+1]:
             return False
@@ -17,10 +17,10 @@ def swap(a, left, right):
 n = int(input())
 a = [int(temp) for temp in input().strip().split()]
 
-if isSorted(a):
+if is_sorted(a):
     print("yes")
-else:
 
+else:
     left, right = -1, -1
     for i in range(n-1):
         if a[i] > a[i+1]:
@@ -33,13 +33,13 @@ else:
     i, j = left, right
     swap(a, left, right)
 
-    if isSorted(a):
+    if is_sorted(a):
         print("yes")
         print("swap {} {}".format(left+1, right+1))
     else:
         swap(a, left, right)
         a[left: right+1] = reversed(a[left: right+1])
-        if isSorted(a):
+        if is_sorted(a):
             print("yes")
             print("reverse {} {}".format(left+1, right+1))
         else:
