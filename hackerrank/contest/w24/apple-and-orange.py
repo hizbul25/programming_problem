@@ -8,5 +8,5 @@ a, b = [int(a), int(b)]
 m, n = input().strip().split(' ')
 m, n = [int(m), int(n)]
 
-print(sum([1 if a+int(apple) >= s and a+int(apple) <= t else 0 for apple in input().strip().split(' ')]))
-print(sum([1 if b+int(orange) >= s and b+int(orange) <= t else 0 for orange in input().strip().split(' ')]))
+print(sum([1 if s <= a+int(apple) <= t else 0 for apple in input().strip().split(' ')]))
+print(sum([1 if s <= b+int(orange) <= t else 0 for orange in input().strip().split(' ')]))
